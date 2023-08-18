@@ -1,0 +1,82 @@
+.gam {
+    display: flex;
+    justify-content: center;
+    margin-top: 88px;
+    margin-bottom: 60px;
+}
+
+
+.username {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 23px;
+}
+
+.password {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.usernameField {
+    width: 289px;
+    height: 64px;
+    padding: 0;
+    border: none;
+    font-size: 25px;
+    text-align: center;
+    background-image: url("./Rectangle\ 30.png");
+}
+
+.passwordField {
+    width: 289px;
+    height: 64px;
+    padding: 0;
+    border: none;
+    font-size: 25px;
+    text-align: center;
+    background-image: url("./Rectangle\ 30.png");
+}
+
+.usernameField:focus,
+.passwordField:focus {
+    box-shadow: 5px 5px 3px gray;
+    border-radius: 10px;
+    outline: none;
+}
+
+.usernameField::placeholder,
+.password::placeholder {
+    width: 289px;
+    height: 64px;
+    padding: 0;
+    border: none;
+    font-size: 25px;
+    text-align: center;
+    color: #8A8A8A;
+}
+
+/* 포커스 시 placeholder의 글자를 투명하게 만듦 */
+.usernameField:focus::placeholder,
+.passwordField:focus::placeholder {
+  /* color: transparent; */
+}
+
+.signIn {
+    display: flex;
+    justify-content: center;
+}
+
+.signInBtn {
+    width: 289px;
+    height: 47.14px;
+    padding: 0;
+    border: none;
+    background-image: url("./Group\ 90.png");
+    background-color: transparent;
+}
+
+.signInBtn:active {
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 10px;
+}
