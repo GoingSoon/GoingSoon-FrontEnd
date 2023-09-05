@@ -1,43 +1,26 @@
-import React, { useState } from 'react';
-import components from "./components";
-import './App.css';
-import centerImage from './Group 11.svg';
-import rectangleImage from "./Rectangle 30.png";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import SignIn from "./pages/SignIn";
+import "./App.css";
 
 const App = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleLogin = () => {
-    // 로그인 처리 로직을 작성합니다.
-    console.log("click!z");
-    console.log('Username:', username);
-    console.log('Password:', password);
-  };
 
   return (
-    <div>
-      <div className='gam'>
-        <img src={centerImage} alt="Centered Image" />
+    <Router>
+      <div className="ResponsiveLayout">
+        <div className="desktop-view">
+        </div>
+        <div className="mobile-view">
+          <div className="mobile-content" style={{border: "1px solid #d0d0d0"}}>
+            <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/login" element={<SignIn/>}/>
+            </Routes>
+          </div>
+        </div>
       </div>
-      <div className="username">
-        <input type="text" value={username} placeholder="login or email" onChange={handleUsernameChange} className="usernameField" />
-      </div>
-      <div className='password'>
-        <input type="password" value={password} placeholder="Password" onChange={handlePasswordChange} className='passwordField'/>
-      </div>
-      <div className='signIn'>
-      <button className='signInBtn' onClick={handleLogin}></button>
-      </div>
-    </div>
+    </Router>
   );
 };
 
