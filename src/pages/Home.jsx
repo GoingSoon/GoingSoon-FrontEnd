@@ -7,7 +7,7 @@ const Home = () => {
 			<h2>임시 홈</h2>
 			<Link to="/login">로그인</Link>
 			<br/>
-			<Link to="/">Upcoming Event</Link>
+			<Link to="/main">Upcoming Event</Link>
 		</div>
 	)
 }

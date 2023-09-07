@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
+import Main from "./pages/Main";
 import "./App.css";
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/login" element={<SignIn/>}/>
+              <Route path="/main" element={<Main/>}/>
             </Routes>
           </div>
         </div>
